@@ -1,10 +1,10 @@
 # Erriez TTP229 touch sensitive keypad library for Arduino
 
-[![Build Status](https://travis-ci.org/Erriez/ErriezTTP229.svg?branch=master)](https://travis-ci.org/Erriez/ErriezTTP229)
+[![Build Status](https://travis-ci.org/Erriez/ErriezTTP229TouchKeypad.svg?branch=master)](https://travis-ci.org/Erriez/ErriezTTP229TouchKeypad)
 
 This is an TTP229 touch sensitive library for Arduino.
 
-![TTP229](https://raw.githubusercontent.com/Erriez/ErriezTTP229/master/extras/TTP229TouchKeypad4x4.png)
+![TTP229](https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229TouchKeypad4x4.png)
 
 
 ## Library features
@@ -26,8 +26,8 @@ This is an TTP229 touch sensitive library for Arduino.
 
 ## Examples
 
-* [ErriezTTP229DualTouchKeypad4x4](https://github.com/Erriez/ErriezTTP229/blob/master/examples/ErriezTTP229DualTouchKeypad4x4/ErriezTTP229DualTouchKeypad4x4.ino) Two TTP229 4x4 keypads.
-* [ErriezTTP229SingleTouchKeypad4x4](https://github.com/Erriez/ErriezTTP229/blob/master/examples/ErriezTTP229SingleTouchKeypad4x4/ErriezTTP229SingleTouchKeypad4x4.ino) One TTP229 4x4 keypad.
+* [ErriezTTP229DualTouchKeypad4x4](https://github.com/Erriez/ErriezTTP229TouchKeypad/blob/master/examples/ErriezTTP229DualTouchKeypad4x4/ErriezTTP229DualTouchKeypad4x4.ino) Two TTP229 4x4 keypads.
+* [ErriezTTP229SingleTouchKeypad4x4](https://github.com/Erriez/ErriezTTP229TouchKeypad/blob/master/examples/ErriezTTP229SingleTouchKeypad4x4/ErriezTTP229SingleTouchKeypad4x4.ino) One TTP229 4x4 keypad.
 
 
 ## Getting started
@@ -97,16 +97,16 @@ void loop()
 ## Hardware
 
 **Arduino UNO**  
-[Arduino UNO](https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-UNO.jpg)
+![Arduino UNO](https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-UNO.jpg)
 
 **ESP8266**  
-[Arduino ESP8266](https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-ESP8266.jpg)
+![Arduino ESP8266](https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-ESP8266.jpg)
 
 **ESP32**  
-[Arduino ESP32](https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-ESP32.jpg)
+![Arduino ESP32](https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-ESP32.jpg)
 
 **DUE**  
-[Arduino DUE](https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-DUE.jpg)
+![Arduino DUE](https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-DUE.jpg)
 
 
 ## Library installation

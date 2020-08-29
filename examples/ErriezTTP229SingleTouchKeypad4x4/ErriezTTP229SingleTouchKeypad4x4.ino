@@ -22,6 +22,13 @@
  * SOFTWARE.
  */
 
+/*!
+ * \brief Erriez TTP229 touch sensitive 4x4 keypad single example for Arduino
+ * \details
+ *      Source:         https://github.com/Erriez/ErriezTTP229TouchKeypad
+ *      Documentation:  https://erriez.github.io/ErriezTTP229TouchKeypad
+ */
+
 #include <ErriezTTP229.h>
 
 // Connect SCL to any DIGITAL pin
