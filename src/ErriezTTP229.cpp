@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 Erriez
+ * Copyright (c) 2019-2020 Erriez
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ void ErriezTTP229::begin(uint8_t sclPin, uint8_t sdoPin)
     _sdoPin = sdoPin;
     
     pinMode(_sclPin, OUTPUT);
-    pinMode(_sdoPin, INPUT);
+    pinMode(_sdoPin, INPUT_PULLUP);
     
     digitalWrite(_sclPin, HIGH);
 }

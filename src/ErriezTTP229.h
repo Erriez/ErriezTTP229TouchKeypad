@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 Erriez
+ * Copyright (c) 2019-2020 Erriez
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +25,9 @@
 #ifndef ERRIEZ_TTP229_H_
 #define ERRIEZ_TTP229_H_
 
+/*!
+ * \brief ErriezTTP229 class
+ */
 class ErriezTTP229
 {
 public:
