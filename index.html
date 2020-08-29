@@ -65,10 +65,10 @@ $(function() {
 <div class="title">Erriez TTP229 touch sensitive keypad library for Arduino </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://travis-ci.org/Erriez/ErriezTTP229"></a></p>
+<div class="textblock"><p><a href="https://travis-ci.org/Erriez/ErriezTTP229TouchKeypad"></a></p>
 <p>This is an TTP229 touch sensitive library for Arduino.</p>
 <div class="image">
-<img src="https://raw.githubusercontent.com/Erriez/ErriezTTP229/master/extras/TTP229TouchKeypad4x4.png" alt="TTP229"/>
+<img src="https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229TouchKeypad4x4.png" alt="TTP229"/>
 </div>
 <h2>Library features</h2>
 <ul>
@@ -87,8 +87,8 @@ $(function() {
 </ul>
 <h2>Examples</h2>
 <ul>
-<li><a href="https://github.com/Erriez/ErriezTTP229/blob/master/examples/ErriezTTP229DualTouchKeypad4x4/ErriezTTP229DualTouchKeypad4x4.ino">ErriezTTP229DualTouchKeypad4x4</a> Two TTP229 4x4 keypads.</li>
-<li><a href="https://github.com/Erriez/ErriezTTP229/blob/master/examples/ErriezTTP229SingleTouchKeypad4x4/ErriezTTP229SingleTouchKeypad4x4.ino">ErriezTTP229SingleTouchKeypad4x4</a> One TTP229 4x4 keypad.</li>
+<li><a href="https://github.com/Erriez/ErriezTTP229TouchKeypad/blob/master/examples/ErriezTTP229DualTouchKeypad4x4/ErriezTTP229DualTouchKeypad4x4.ino">ErriezTTP229DualTouchKeypad4x4</a> Two TTP229 4x4 keypads.</li>
+<li><a href="https://github.com/Erriez/ErriezTTP229TouchKeypad/blob/master/examples/ErriezTTP229SingleTouchKeypad4x4/ErriezTTP229SingleTouchKeypad4x4.ino">ErriezTTP229SingleTouchKeypad4x4</a> One TTP229 4x4 keypad.</li>
 </ul>
 <h2>Getting started</h2>
 <div class="fragment"><div class="line">{c++}</div><div class="line">#include &lt;ErriezTTP229.h&gt;</div><div class="line"></div><div class="line">// TTP229 pin defines</div><div class="line">#if defined(ARDUINO_ARCH_AVR)</div><div class="line">#define TTP229_SDO_PIN     2  // SDO to interrupt pin 2 (INT0) or pin 3 (INT1)</div><div class="line">#define TTP229_SCL_PIN     3  // SCL to any DIGITAL IO pin</div><div class="line">#elif defined(ARDUINO_ARCH_ESP8266)</div><div class="line">#define TTP229_SDO_PIN    D1  // Interrupt pin</div><div class="line">#define TTP229_SCL_PIN    D2  // Any pin</div><div class="line">#elif defined(ARDUINO_ARCH_ESP32)</div><div class="line">#define TTP229_SDO_PIN     16  // Keep GPIO0 low during programming</div><div class="line">#define TTP229_SCL_PIN     4</div><div class="line">#else</div><div class="line">#error &quot;May work, but not tested on this target&quot;</div><div class="line">#endif</div><div class="line"></div><div class="line">// Create keypad object</div><div class="line">ErriezTTP229 ttp229;</div><div class="line"></div><div class="line"></div><div class="line">#if defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32)</div><div class="line">ICACHE_RAM_ATTR</div><div class="line">#endif</div><div class="line">void keyChange()</div><div class="line">{</div><div class="line">    // A key press changed</div><div class="line">    ttp229.keyChange = true;</div><div class="line">}</div><div class="line"></div><div class="line">void setup()</div><div class="line">{</div><div class="line">    // Initialize serial</div><div class="line">    Serial.begin(115200);</div><div class="line">    while (!Serial) {</div><div class="line">        ;</div><div class="line">    }</div><div class="line">    Serial.begin(115200);</div><div class="line">    Serial.println(F(&quot;\nErriez TTP229 single 16-keys keypad example&quot;));</div><div class="line"></div><div class="line">    // Initialize keypad with interrupt</div><div class="line">    ttp229.begin(TTP229_SCL_PIN, TTP229_SDO_PIN);</div><div class="line"></div><div class="line">    // Initialize interrupt pin on SD0</div><div class="line">    attachInterrupt(digitalPinToInterrupt(TTP229_SDO_PIN), keyChange, FALLING);</div><div class="line">}</div><div class="line"></div><div class="line">void loop()</div><div class="line">{</div><div class="line">    // Print key</div><div class="line">    if (ttp229.keyChange) {</div><div class="line">        Serial.println(ttp229.GetKey16());</div><div class="line">        ttp229.keyChange = false;</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><h2>Library dependencies</h2>
@@ -96,10 +96,18 @@ $(function() {
 <li>None</li>
 </ul>
 <h2>Hardware</h2>
-<p><b>Arduino UNO</b> <a href="https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-UNO.jpg">Arduino UNO</a></p>
-<p><b>ESP8266</b> <a href="https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-ESP8266.jpg">Arduino ESP8266</a></p>
-<p><b>ESP32</b> <a href="https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-ESP32.jpg">Arduino ESP32</a></p>
-<p><b>DUE</b> <a href="https://github.com/Erriez/ErriezTTP229/blob/master/extras/TTP229-DUE.jpg">Arduino DUE</a></p>
+<p><b>Arduino UNO</b> </p><div class="image">
+<img src="https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-UNO.jpg" alt="Arduino UNO"/>
+</div>
+<p><b>ESP8266</b> </p><div class="image">
+<img src="https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-ESP8266.jpg" alt="Arduino ESP8266"/>
+</div>
+<p><b>ESP32</b> </p><div class="image">
+<img src="https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-ESP32.jpg" alt="Arduino ESP32"/>
+</div>
+<p><b>DUE</b> </p><div class="image">
+<img src="https://raw.githubusercontent.com/Erriez/ErriezTTP229TouchKeypad/master/extras/TTP229-DUE.jpg" alt="Arduino DUE"/>
+</div>
 <h2>Library installation</h2>
 <p>Please refer to the <a href="https://github.com/Erriez/ErriezArduinoLibrariesAndSketches/wiki">Wiki</a> page.</p>
 <h2>Other Arduino Libraries and Sketches from Erriez</h2>
